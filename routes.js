@@ -1,4 +1,4 @@
-var app = angular.module("eventDashboard", ["ngRoute"]);
+var app = angular.module("eventDashboard", ["ngRoute", "ui.grid"]);
 app.config(function($routeProvider) {
     $routeProvider
     .when("/", {
