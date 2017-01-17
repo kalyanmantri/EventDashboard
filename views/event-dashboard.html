@@ -1,1 +1,20 @@
-<div>WELCOME..!</div>
+<div>
+	<label for="mySelect">Select Sales Organisation:</label>
+    <select name="mySelect" id="mySelect" ng-model="inputRequest.salesOrganisationId">
+		<option ng-repeat="option in salesOrganisationsvalues" value="{{option.Id}}">{{option.Value}}</option>
+	</select>
+	<div>Event name: <input type="text" ng-model="inputRequest.eventName"/></div>
+	<div>Launch date: <input type="text" ng-model="inputRequest.launchDate" ng-focus="enableDatePicker()" id="datePicker"/></div>
+	<div>
+		<button class="btn-primary" ng-click="applyFilter()">Apply filters</button>
+		<button class="btn-primary" ng-click="clearFilter()">Clear filters</button>
+	</div>
+</div>
+<div ui-grid="gridOptions"></div>
+<div>
+	<div class="pull-left">Total records: {{totalEvents}}</div>
+	<div class="pull-right">
+		<button class="btn-primary" ng-click="previousPage()" ng-if="inputRequest.pageNumber!=1">Previous</button>
+		<button class="btn-primary" ng-click="nextPage()" ng-if="inputRequest.pageNumber!=maxPageNumber">Next</button>
+	</div>
+</div>

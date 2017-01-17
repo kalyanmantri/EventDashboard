@@ -4,13 +4,13 @@ function ($http) {
 
     var factory = {};
 
-    factory.getArticlesByArticleNumber = function (articleNumber,
-        pageNumber,
-        pageSize) {
-        return $http.get('/Product/GetArticlesByArticleNumber?searchText=' + articleNumber 
-            + '&pageNumber=' + pageNumber 
-            + '&pageSize=' + pageSize);
+    factory.getEventsList = function (eventListRequest) {
+		return $http.get('jsons/eventsList.json');
     }
+	
+	factory.getsalesOrganisations = function() {
+		return $http.get('jsons/salesOrganisation.json')
+	}
 
     return factory;
 }]);

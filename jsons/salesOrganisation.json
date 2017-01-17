@@ -1,0 +1,12 @@
+{
+	"Options": [{
+		"Id": 1,
+		"Value": "value1"
+	}, {
+		"Id": 2,
+		"Value": "value2"
+	}, {
+		"Id": 3,
+		"Value": "value3"
+	}]
+}
