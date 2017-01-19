@@ -1,20 +1,42 @@
-<div>
-	<label for="mySelect">Select Sales Organisation:</label>
-    <select name="mySelect" id="mySelect" ng-model="inputRequest.salesOrganisationId">
-		<option ng-repeat="option in salesOrganisationsvalues" value="{{option.Id}}">{{option.Value}}</option>
-	</select>
-	<div>Event name: <input type="text" ng-model="inputRequest.eventName"/></div>
-	<div>Launch date: <input type="text" ng-model="inputRequest.launchDate" ng-focus="enableDatePicker()" id="datePicker"/></div>
+<div class="pies-events-dashboard-landing">
+	<div class="row edl-select-option">
+		<div class="col-md-3">
+			<label for="mySelect">Select Sales Organisation:</label>
+		</div>
+		<div class="col-md-9">
+			<select name="mySelect" id="mySelect" ng-model="inputRequest.salesOrganisationId">
+				<option ng-repeat="option in salesOrganisationsvalues" value="{{option.Id}}">{{option.Value}}</option>
+			</select>
+		</div>
+	</div>
+    
+    <hr class="divider" />
+    
+    <div class="row edl-event-name">
+		<div class="col-md-3"><label>Event name:</label></div>
+		<div class="col-md-3"> 
+			<input type="text" ng-model="inputRequest.eventName"/>
+		</div>    
+    </div>
+    
+    <hr class="divider" />
+    
+    <div class="row edl-launch-date">
+		<div class="col-md-3"><label>Launch date:</label></div>
+		<div class="col-md-3">
+			<input type="text" ng-model="inputRequest.launchDate" ng-focus="enableDatePicker()" id="datePicker"/>
+		</div>    
+    </div>
 	<div>
-		<button class="btn-primary" ng-click="applyFilter()">Apply filters</button>
-		<button class="btn-primary" ng-click="clearFilter()">Clear filters</button>
+		<button type="button" class="btn btn-primary" ng-click="applyFilter()">Apply filters</button>
+		<button type="button" class="btn btn-primary" ng-click="clearFilter()">Clear filters</button>
 	</div>
 </div>
 <div ui-grid="gridOptions"></div>
-<div>
+<div class="edl-table-footer">
 	<div class="pull-left">Total records: {{totalEvents}}</div>
 	<div class="pull-right">
-		<button class="btn-primary" ng-click="previousPage()" ng-if="inputRequest.pageNumber!=1">Previous</button>
-		<button class="btn-primary" ng-click="nextPage()" ng-if="inputRequest.pageNumber!=maxPageNumber">Next</button>
+		<button type="button" class="btn btn-default" ng-click="previousPage()" ng-if="inputRequest.pageNumber!=1">Previous</button>
+		<button type="button" class="btn btn-default" ng-click="nextPage()" ng-if="inputRequest.pageNumber!=maxPageNumber">Next</button>
 	</div>
 </div>
