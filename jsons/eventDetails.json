@@ -1,0 +1,33 @@
+{
+	"eventName" : "Event Name",
+	"eventId" : "eventId",
+	"eventDate" : "some date",
+	"products": [{
+		"id": 1,
+		"title": "product1",
+		"isAllMapped": false,
+		"isReadyForOnline": true,
+		"isRejected": false,
+		"isAwaitingQA": false,
+		"isIncompleteContent": false,
+		"isImageReady": false
+	}, {
+		"id": 2,
+		"title": "product2",
+		"isAllMapped": false,
+		"isReadyForOnline": false,
+		"isRejected": false,
+		"isAwaitingQA": false,
+		"isIncompleteContent": true,
+		"isImageReady": false
+	}, {
+		"id": 3,
+		"title": "product3",
+		"isAllMapped": false,
+		"isReadyForOnline": false,
+		"isRejected": false,
+		"isAwaitingQA": true,
+		"isIncompleteContent": false,
+		"isImageReady": false
+	}]
+}

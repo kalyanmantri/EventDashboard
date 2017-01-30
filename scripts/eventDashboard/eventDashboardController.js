@@ -10,7 +10,7 @@ app.controller('eventDasboardController', function($scope, eventDashboardService
 	
 	$scope.gridOptions = {
 		enableSorting: true,
-		columnDefs: [{ field: 'column1' }, { field: 'column2' }, { field: 'column3' }]
+		columnDefs: [{ field: 'column1', cellTemplate:'<a href="#/eventDetails/{{row.entity.column1}}">{{row.entity.column1}}</a>' }, { field: 'column2' }, { field: 'column3' }]
 	};
 	
 	$scope.init = function() {
